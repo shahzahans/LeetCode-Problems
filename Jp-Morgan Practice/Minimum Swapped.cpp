@@ -33,6 +33,7 @@ int minSwap (string s1, string s2){
     return (x/2) + (y/2) + (x%2) * 2; 
 }
 
+// test case
 int main()
 {
     string s1;
