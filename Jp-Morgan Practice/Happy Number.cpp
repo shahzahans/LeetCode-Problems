@@ -16,9 +16,11 @@ using namespace std;
 
 
 bool isHappy(int n){
-    unordered_set <int> seen;
-    
+    unordered_set <int> seen; //initailize a set to store seen #
+
+    // while n is not 1 and n has not been seen before
     while (n != 1 && seen.find(n) == seen.end()){
+        //add n to seen
         seen.insert(n);
         
         int sum = 0;
