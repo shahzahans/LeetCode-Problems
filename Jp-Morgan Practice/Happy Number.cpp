@@ -22,19 +22,21 @@ bool isHappy(int n){
     while (n != 1 && seen.find(n) == seen.end()){
         //add n to seen
         seen.insert(n);
-        
+
+        //initialize sum to 0
         int sum = 0;
-        
+        //while n is not 0
         while (n!=0){
-            int digit = n %10;
-            sum += digit * digit;
-            n/=10;
+            int digit = n %10; // get the last digit ofn
+            sum += digit * digit; //add the square of the digit to the sum
+            n/=10; //remove the last digit of n
         }
-        n = sum;
+        n = sum; //set n to the sum
     }
-    return n == 1;
+    return n == 1; // return true if n is 1, false otherwise
 }
 
+// test case
 int main()
 {
     int n;
